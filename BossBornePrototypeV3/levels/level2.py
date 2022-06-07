@@ -5,18 +5,18 @@ import main
 def run_level2():
     # instanciating all objects in each room so these can be appended to the list of objects in the room
     # CUBICLE 1
-    electricalBoxKey = Items("Small key", True, False, "", "") # will only be found in a storage object so doesnt need big description
+    electricalBoxKey = Items("Small key", True, False, "", "", True) # will only be found in a storage object so doesnt need big description
     computerCase = Storage("Computer case", level2D.computerCaseLongDescription, level2D.computerCaseShortDescription, False, [electricalBoxKey])
-    stickyNote = Items("Sticky note", False, False, level2D.stickyNoteLongDescription, level2D.stickyNoteShortDescription)
+    stickyNote = Items("Sticky note", False, False, level2D.stickyNoteLongDescription, level2D.stickyNoteShortDescription, True)
     # KITCHEN
-    coffee = Items("Hot cup of coffee", True, True, level2D.coffeeLongDescription, level2D.coffeeShortDescription)
+    coffee = Items("Hot cup of coffee", True, True, level2D.coffeeLongDescription, level2D.coffeeShortDescription, True)
     # CUBICLE 2
-    screwdriver = Items("Screwdriver", True, True, level2D.screwdriverLongDescription, level2D.screwdriverShortDescription)
+    screwdriver = Items("Screwdriver", True, True, level2D.screwdriverLongDescription, level2D.screwdriverShortDescription, True)
     # maybe we add throwables in here like desk drawers complete with a pencil?
     # CUBICLE 4
     electricalBox = Storage("Electrical box", level2D.electricalBoxLongDescription, level2D.electricalBoxShortDescription, True, [], electricalBoxKey)
     # CUBICLE 5
-    ventScreen = Items("Vent cover", False, False, level2D.ventScreenLongDescription, level2D.ventScreenShortDescription)
+    ventScreen = Items("Vent cover", False, False, level2D.ventScreenLongDescription, level2D.ventScreenShortDescription, True)
     
     # instanciating all the rooms
     elevator = Room('Elevator', [], None, None, None, None, level2D.elevatorDescription)

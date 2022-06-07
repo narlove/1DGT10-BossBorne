@@ -2,9 +2,9 @@ from classDefinitions import *
 import main
 
 def run_level0(): # set up all the level information here
-    rock = Items("Rock", True, True, "A simple rock with a few jagged edges. It looks rather harmless, and rather boring.", "There is a rock on the floor in front of you.")
+    rock = Items("Rock", True, True, "A simple rock with a few jagged edges. It looks rather harmless, and rather boring.", "There is a rock on the floor in front of you.", True)
     key = Items("Key", True, False, "A standard, medieval key. Complete with a little rust around the edges, it looks like it could be big enough to open a slightly-larger than normal padlock.",
-                  "A key sits on a podium in the middle of the room.")
+                  "A key sits on a podium in the middle of the room.", True)
     
     barrel = Storage("Barrel", "A broken down old barrel", "A broken down old barrel sits in the corner of the room.", True, [rock], key)
     

@@ -15,6 +15,7 @@ import commands.unlock
 import commands.drop 
 import commands.open 
 import commands.movement 
+import commands.lick
 
 playerInventory = []
 
@@ -60,3 +61,5 @@ def cmds(currentRoom):
             commands.help.cmd_help()
         elif playerCommand.startswith('open'):
             commands.open.cmd_open(currentRoom, playerCommand)
+        elif playerCommand.startswith('lick'):
+            commands.lick.cmd_lick(currentRoom, playerCommand)

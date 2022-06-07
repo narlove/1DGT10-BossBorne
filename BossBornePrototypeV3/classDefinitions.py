@@ -33,12 +33,13 @@ class Room: # this is the room class
     # this needs to be implemented more, but for this example code, it will be left as is
  
 class Items: # all objects stem from here
-    def __init__(self, name: str, canPickup: bool, canDrop: bool, description: str, shortDes: str):
+    def __init__(self, name: str, canPickup: bool, canDrop: bool, description: str, shortDes: str, canLick: bool):
         self._name = name
         self._canPickup = canPickup
         self._canDrop = canDrop
         self._description = description
         self._shortDes = shortDes # this is for appending to the room description if the object is in the room
+        self._canLick = canLick
  
     def get_description(self): # similar two functions to the room class
         return self._description
