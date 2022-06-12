@@ -79,7 +79,7 @@ class BreakableItems(Items): # inherits from the items class because they will a
         print(self._breakMessage)
         self._description = self._brokenDescription
         self._shortDes = self._brokenShortDescription
-
+        
 class Door:
     def __init__(self, startingRoom: Room, endingRoom: Room, isLocked: bool, correspondingDoor, reqKey: Items = None):
         self._startingRoom = startingRoom
