@@ -1,4 +1,4 @@
-from classDefinitions import *
+from classDefinitions import Items
 
 lickTotal = 0
 

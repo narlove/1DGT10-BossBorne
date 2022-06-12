@@ -1,10 +1,8 @@
-# Version 1.17.0.12
+# Version 1.17.0.15
 #         ^ indicates semester
 #           ^ indicates school week
 #              ^ indicates update (0 for prototype, 1 for initial, 2 for next, 3 etc)
 #                ^ each time i open this file change this number
-
-from classDefinitions import *
 
 import commands.help
 import commands.look
@@ -16,6 +14,9 @@ import commands.drop
 import commands.open 
 import commands.movement 
 import commands.lick
+import commands.punch
+import commands.breakObject
+import commands.up
 
 playerInventory = []
 
@@ -63,3 +64,9 @@ def cmds(currentRoom):
             commands.open.cmd_open(currentRoom, playerCommand)
         elif playerCommand.startswith('lick'):
             commands.lick.cmd_lick(currentRoom, playerCommand)
+        elif playerCommand.startswith('punch'):
+            commands.punch.cmd_punch(currentRoom, playerCommand)   
+        elif playerCommand.startswith('break'):
+            commands.breakObject.cmd_break(currentRoom, playerCommand, playerInventory)
+        elif playerCommand.lower() in ['up', 'u']:
+            commands.up.cmd_up()
