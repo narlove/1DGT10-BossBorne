@@ -10,7 +10,8 @@ helpCommand = ['look | l: Prints the room description again',
                's | south: Move south (if avaliable)',
                'w | west: Move west (if avaliable)',
                'open [container]: Opens the specified container so you can grab items out of it.',
-               'lick [object] | Lick an object... don\'t try it too many times though...']
+               'lick [object] | Lick an object... don\'t try it too many times though...',
+               'break [object] | Break an object, but it will prompt you for a device to break it with.']
 
 def cmd_help():
     for command in helpCommand:

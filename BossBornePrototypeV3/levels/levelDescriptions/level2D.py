@@ -1,6 +1,8 @@
-elevatorDescription = ("After a slow little wait in the mouldy, brown box, the elevator music I've been enjoying subsides and, in its place, a happy little chirp follows."
+# go thru and change for each of these to remove the \n at the end
+
+elevatorDescription = ("After a slow little wait in the mouldy, brown box, the elevator music I've been enjoying subsides and, in its place, a happy little chirp follows. "
 "I'm one level closer. The steel doors slowly creak open on the north side of the elevator. "
-"\nA fresh scent of old coffee and newspaper hits my nostrils. Followed by the sight of the familar brown boxes, "
+"\nA fresh scent of old coffee and newspaper hits my nostrils, followed by the sight of the familar brown boxes, "
 "with pinboards on the walls, old computers running noisily and paper scattered all over the floor. "
 "It seems to be deserted.\nAs I get out of the elevator, the upbeat music begins again and the doors slide shut. "
 "Theres no going back now, the elevator has already been called.")
@@ -26,10 +28,9 @@ computerCaseShortDescription = ("Elsewhere in the room, the computer buzzes unde
 
 cubicle2Description = ("Another cubical that looks exactly like every other one in the office stands before me. "
                        "On the west wall, another desk. On the north wall, another pinboard sits next to the desk, "
-                       "this time with less appealing information.\n"
+                       "boasting only the most boring information.\n"
                        "One exit is in a similar style to the other cubicals, a mere slit in the south wall. "
-                       "Directly opposite from it, in the north wall, sits a much more doorway like shape, leading out into a kitchen.\n"
-                       "I guess we follow the trail... Maybe it will lead to a way out?")
+                       "Directly opposite from it, in the north wall, sits a much more doorway like shape, leading out into a kitchen.")
 
 screwdriverLongDescription = ("The screwdriver is a standard, Phillips screwdriver, complete with a yellow handle and a long stainless steel head. "
                               "It looks new and ready to go.")
@@ -51,7 +52,7 @@ cubicle3Description = ("A standard cubicle. Actually, one of the nicer ones I've
 cubicle4Description = ("I walk into another cubical. This time, the desk is sitting along the south wall. "
                        "The room is filled with unusually humming noises, apparently coming from the desk. "
                        "Also, unlike other rooms, this room seems to lack an office chair, a pinboard and any photos. "
-                       "The only thing in the room is the desk!\n!"
+                       "The only thing in the room is the desk!\n"
                        "Differing from other cubicles, this one only boasts one slit, in its west wall. "
                        "The east wall actually harbours a door, standing menacingly with a note attached. "
                        "'Old stairwell closed. Permanently.'")
@@ -59,6 +60,10 @@ cubicle4Description = ("I walk into another cubical. This time, the desk is sitt
 electricalBoxLongDescription = ("The box has a small little key hole on one side. If only I could open this with a small little key, "
                                 "I might be able to play with the wires a little.")
 electricalBoxShortDescription = ("Under the desk, the source of the humming becomes clear. A box with a yellow lightning strike on it can only indicate one thing; Electricity.")
+
+wiresBreakMessage = ("Pouring the coffee all over the wires, you start to hear a sizzle. "
+                     "This is quickly followed by a standard crack and pop, and then you see a few sparks fly from one of the wires. "
+                     "Even before you hear the sound of the fan shutting off, you can tell these wires won't work for a while. ")
 
 # CUBICLE 5
 
@@ -72,10 +77,9 @@ cubicle5Description = ("Sitting on the east wall is a desk, office chair sitting
 
 ventScreenLongDescription = ("The vent screen seems old and easy enough to move. I just need to undo those last two screws...")
 
-ventScreenShortDescription = ("Sitting just above the desk comes the source of the wind; A vent. "
+ventScreenShortDescription = ("Sitting just above the desk on the east side of the room comes the source of the wind; A vent. "
                               "As I look inside it, I can just bearly see down to the end of it. "
-                              "Any hopes of getting in are blocked by the vent cover, although, it is already missing a screw or two.")
-
+                              "Any hopes of getting in are blocked by the vent cover. If only I could unlock this with some tool...")
 # CUBICLE 6
 
 cubicle6Description = ("Another cubical. Sitting along the east wall is a desk, papers everywhere, and some more, "
@@ -101,12 +105,10 @@ coffeeShortDescription = ("On the bench is a cup of coffee, that noone seems to 
                           
 # VENTS
 
-ventsDescription = ("The further down I get, the colder it gets. "
-                   "At this point I'm thinking that I probably should have brought another jacket or two. "
-                   "Just as it gets to a point where I can barely stand it anymore, "
-                   "an unmistakeably massive vent fan stands looming over me. "
-                   "That isn't saying much, as I'm on my hands and knees and the moment, "
-                   "but the fan still looks rather intimidating in the dim light.\n"
+ventsOnDescription = ("The further down I get, the colder it gets. "
+                   "Eventually, I come across "
+                   "an unmistakeably massive vent fan looming over me, turning at hundreds of revolutions per minute. "
+                   "Now how do I get past this one? \n"
                    "The only exit is either through the fan, blocking the south corridor, "
                    "or through the broken vent eastward. And I don't think I'm taking the fan option...\n"
                    "There is nothing here I can grab without getting my hands taken off. "
@@ -114,6 +116,13 @@ ventsDescription = ("The further down I get, the colder it gets. "
                    "Surely there must be some way to get past this fan. "
                    "Perhaps an eletrical box that controls the fan should lie somewhere around one of the offices.")
 
+ventsOffDescription = ("The further down I get, the colder it gets. "
+                       "Crawling further down, I eventually come across "
+                       "an unmistakeably massive vent fan looming over me. "
+                       "Luckily, it seems to have been stopped! I wonder if I caused that... \n"
+                       "Now, I can either head through the stopped vent fan down south, "
+                       "or through the broken vent eastward. \n"
+                       "There is nothing here that seems interesting enough to grab.")
 # STAIRWELL
 
 stairwellDescription = ("The closed up stairwell. I can see why it was closed. The carpet on the landing, "
