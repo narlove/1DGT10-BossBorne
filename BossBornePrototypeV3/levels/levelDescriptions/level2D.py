@@ -80,7 +80,6 @@ ventScreenLongDescription = ("The vent screen seems old and easy enough to move.
 ventScreenShortDescription = ("Sitting just above the desk on the east side of the room comes the source of the wind; A vent. "
                               "As I look inside it, I can just bearly see down to the end of it. "
                               "Any hopes of getting in are blocked by the vent cover. If only I could unlock this with some tool...")
-
 # CUBICLE 6
 
 cubicle6Description = ("Another cubical. Sitting along the east wall is a desk, papers everywhere, and some more, "
@@ -124,7 +123,6 @@ ventsOffDescription = ("The further down I get, the colder it gets. "
                        "Now, I can either head through the stopped vent fan down south, "
                        "or through the broken vent eastward. \n"
                        "There is nothing here that seems interesting enough to grab.")
-
 # STAIRWELL
 
 stairwellDescription = ("The closed up stairwell. I can see why it was closed. The carpet on the landing, "
