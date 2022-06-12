@@ -69,7 +69,3 @@ def run_level1():
 
     currentRoom = entrance
     main.cmds(currentRoom)
-
-
-
-

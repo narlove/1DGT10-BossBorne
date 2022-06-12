@@ -31,6 +31,10 @@ def cmd_grab(currentRoom, playerCommand, playerInventory):
                 break
             for eachCObject in containerReference._storedItems:
                 if gObject == eachCObject._name.lower():
+                    if eachCObject._canPickup == False:
+                        print(f"The {eachCObject._name.lower()} is unable to be picked up")
+                        completed = True
+                        break
                     containerReference._storedItems.remove(eachCObject)
                     playerInventory.append(eachCObject)  
                     print(f"You picked up a {eachCObject._name.lower()}")

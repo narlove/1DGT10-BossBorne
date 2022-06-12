@@ -12,15 +12,27 @@ class Room: # this is the room class
         # this helps if a user picks up an object and it is no longer in the room
         self._tempDes = ""
         self._tempDes = self._description
-        for eachObject in self._objects:
-            self._tempDes = self._tempDes + " " + eachObject._shortDes
+        toAppend = self._objects[:]
+        try:
+            self._tempDes = self._tempDes + "\n" + toAppend[0]._shortDes
+            toAppend.pop(0)
+            for eachObject in toAppend:
+                self._tempDes = self._tempDes + " " + eachObject._shortDes
+        except:
+            pass
         return self._tempDes
     
     def print_description(self): # same method as above but prints rather than returns, just for simplicity and QoL
         self._tempDes = ""
         self._tempDes = self._description
-        for eachObject in self._objects:
-            self._tempDes = self._tempDes + " " + eachObject._shortDes
+        toAppend = self._objects[:]
+        try:
+            self._tempDes = self._tempDes + "\n" + toAppend[0]._shortDes
+            toAppend.pop(0)
+            for eachObject in toAppend:
+                self._tempDes = self._tempDes + " " + eachObject._shortDes
+        except:
+            pass
         print(self._tempDes)
  
     def print_objects(self): # iterates through the objects list and prints them out
@@ -46,8 +58,28 @@ class Items: # all objects stem from here
         return self._description
     
     def print_description(self):
-        print(self._description)
- 
+        print(self._description)      
+class BreakableItems(Items): # inherits from the items class because they will a lot of similar stuff
+    def __init__(self, name: str, canPickup: bool, canDrop: bool, description: str, shortDes: str, isBroken: bool, breakMessage: str, bDes: str, bSDes: str, reqItem: Items = None):
+        super().__init__(name, canPickup, canDrop, description, shortDes, False)
+        self._isBroken = isBroken # check if its broken so it cant be twice in a row
+        self._breakMessage = breakMessage # the message to display when its broken
+        self._brokenDescription = bDes # the description to set to when its broken
+        self._brokenShortDescription = bSDes # the short des to set to when its broken
+        self._reqItem = reqItem
+        
+    def breakObject(self, item):
+        if self._isBroken == True:
+            print("That object is already broken!")
+            return
+        if not item or item != self._reqItem:
+            print("You cant break this object with that item")
+            return
+        self._isBroken = True
+        print(self._breakMessage)
+        self._description = self._brokenDescription
+        self._shortDes = self._brokenShortDescription
+
 class Door:
     def __init__(self, startingRoom: Room, endingRoom: Room, isLocked: bool, correspondingDoor, reqKey: Items = None):
         self._startingRoom = startingRoom
