@@ -8,7 +8,7 @@ from levels.level4 import run_level4
 import json
 import os
 
-currentLevel = 0
+#currentLevel = 0
 levelInfoDir = "levels\\levelInformation.json"
 
 levelIndex = {
@@ -29,7 +29,7 @@ if __name__ == "__main__":
         quit()
     else:
         os.system('cls||clear')
-        tempJson = {"currentLevel": runIndex}
-        with open(levelInfoDir, "w") as f: 
-            json.dump(tempJson, f)
+        #tempJson = {"currentLevel": runIndex}
+        #with open(levelInfoDir, "w") as f: 
+        #    json.dump(tempJson, f)
         runInstance()

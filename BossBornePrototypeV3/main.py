@@ -16,7 +16,6 @@ import commands.movement
 import commands.lick
 import commands.punch
 import commands.breakObject
-import commands.up
 
 playerInventory = []
 
@@ -68,5 +67,3 @@ def cmds(currentRoom):
             commands.punch.cmd_punch(currentRoom, playerCommand)   
         elif playerCommand.startswith('break'):
             commands.breakObject.cmd_break(currentRoom, playerCommand, playerInventory)
-        elif playerCommand.lower() in ['up', 'u']:
-            commands.up.cmd_up()

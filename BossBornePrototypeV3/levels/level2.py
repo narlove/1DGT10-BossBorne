@@ -30,7 +30,7 @@ def run_level2():
     cubicle5 = Room("Cubicle 5", [ventScreen], None, None, None, None, level2D.cubicle5Description)
     cubicle6 = Room("Cubicle 6", [], None, None, None, None, level2D.cubicle6Description)
     vents = Room("Vents", [], None, None, None, None, level2D.ventsOnDescription)
-    stairwell = Room("Stairwell", [], None, None, None, None, level2D.stairwellDescription)
+    stairwell = EndingRoom("Stairwell", [], None, None, None, None, level2D.stairwellDescription, None, 2)
     kitchen = Room("Kitchen", [coffee], None, None, None, None, level2D.kitchenDescription)
 
     # connecting all the rooms
