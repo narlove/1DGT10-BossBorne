@@ -1,9 +1,12 @@
 from classDefinitions import *
 from levels.levelDescriptions import peterdinklin
+from levels.level2 import run_level2
 import main
 
 #LEVELS IS CALLED PETERDINKLIN BECAUSE IT BROKE SO WE STUCK WITH PETERDINKLIN <----Note for myself
 
+def next_level():
+    run_level2()
 
 def run_level1():
     #ENTRANCE
@@ -18,7 +21,6 @@ def run_level1():
     #BATHROOM STALL
     accessKey = Items("Access Key", True, False,  peterdinklin.accessKeyLongDescription, peterdinklin.accessKeyShortDescription, True, True)
 
-
     #ROOMS~~~~
     lounge = Room("Lounge", [], None, None, None, None, peterdinklin.loungeDescription)
     elevator = Room("Elevator", [], None, None, None, None, peterdinklin.elevatorDescription)
@@ -28,7 +30,7 @@ def run_level1():
     kitchen = Room("Kitchen", [fridge], None, None, None, None, peterdinklin.kitchenDescription)
     entrance = Room("Entrance", [gun], None, None, None, None, peterdinklin.entranceDescription)
     lobby = Room("Lobby", [], None, None, None, None, peterdinklin.lobbyDescription)
-    elevatorInside = Room("Elevator Inside", [], None, None, None, None, peterdinklin.elevatorInsideDescription)
+    elevatorInside = EndingRoom("Elevator Inside", [], None, None, None, None, peterdinklin.elevatorInsideDescription)
 
   # Locked Doors
     elevatorToElevatorInside = Door(elevator, elevatorInside, True, None, accessKey)
@@ -68,4 +70,4 @@ def run_level1():
     elevatorInside.w = elevatorInsideToElevator
 
     currentRoom = entrance
-    main.cmds(currentRoom)
+    main.cmds(currentRoom, next_level)

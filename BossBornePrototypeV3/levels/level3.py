@@ -1,4 +1,4 @@
-from classDefinitions import *
+from classDefinitions import * 
 import main
 
 currentRoom = None
@@ -10,7 +10,7 @@ def run_level3():
     stairwell = Room("Stairwell", [], None, None, None, None, level3D.stairwellDescription)
     mainOffice = Room("Office", [], None, None, None, None, level3D.officeDescription)
     desk = Room("Desk", [stickyNote], None, None, None, None, level3D.deskDescription)
-    hiddenCompartment = Room("Compartment", [], None, None, None, None, level3D. compartmentDescription)
+    hiddenCompartment = Room("Compartment", [], None, None, None, None, level3D.compartmentDescription)
     
     currentRoom = mainOffice
     main.cmds(currentRoom)

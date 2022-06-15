@@ -1,4 +1,4 @@
-# Version 1.17.0.15
+# Version 1.17.0.21
 #         ^ indicates semester
 #           ^ indicates school week
 #              ^ indicates update (0 for prototype, 1 for initial, 2 for next, 3 etc)
@@ -17,9 +17,11 @@ import commands.lick
 import commands.punch
 import commands.breakObject
 
+import classDefinitions
+
 playerInventory = []
 
-def cmds(currentRoom):
+def cmds(currentRoom, nextLevel):
     currentRoom.print_description()
 
     # where all the commands happen
@@ -40,21 +42,29 @@ def cmds(currentRoom):
         elif playerCommand.lower() in ['n', 'north']:
             try:
                 currentRoom = commands.movement.cmd_north(currentRoom)
+                if isinstance(currentRoom, classDefinitions.EndingRoom):
+                    nextLevel()
             except AttributeError:
                 continue
         elif playerCommand.lower() in ['e', 'east']:
             try:
                 currentRoom = commands.movement.cmd_east(currentRoom)
+                if isinstance(currentRoom, classDefinitions.EndingRoom):
+                    nextLevel()
             except AttributeError:
                 continue
         elif playerCommand.lower() in ['s', 'south']:
             try:
                 currentRoom = commands.movement.cmd_south(currentRoom)
+                if isinstance(currentRoom, classDefinitions.EndingRoom):
+                    nextLevel()
             except AttributeError:
                 continue
         elif playerCommand.lower() in ['w', 'west']:
             try:
                 currentRoom = commands.movement.cmd_west(currentRoom)
+                if isinstance(currentRoom, classDefinitions.EndingRoom):
+                    nextLevel()
             except AttributeError:
                 continue
         elif playerCommand.lower() in ['help', 'h', 'cmds', 'cmd', 'commands', 'command']:

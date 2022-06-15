@@ -1,5 +1,3 @@
-from turtle import pen
-
 # ENTRANCE
 entranceDescription = ("Ah…. The Corporation. CO, not only the most richest and luxurious hotel in the worlds but is also owned by the world’s richest man Elon Bezos. I hate Elon Bezos… rich bastard.\n"
                        "I wanna punch him right in his self-righteous face… y’know what… he sits on top of the building. I’m going to go punch him. Let's go up into the LOBBY then!.\n")
@@ -21,7 +19,7 @@ loungeDescription = ("Soft chairs and sofas everywhere… also tons of old peopl
 elevatorDescription = ("Industrial grade elevators used to traverse between levels, It goes up and down like any other elevator. It requires an Access Key to work.")
 
 #ELEVATOR INSIDE
-elevatorInsideDescription = ("Level 2... here we go baby... Oh shit I still have to go UP.")
+elevatorInsideDescription = ("Level 2... here we go baby...")
 # BATHROOM
 bathroomDescription = ("Eughh… Holy shit it smells like shit. I just saw that employee complaining outside walk out of here WHAT A PIG!\n"
                        "Theres a bathroom stall ahead if I need to take a shit...But it appears to be locked but it seems the lock can be opened with something small and sharp... hehe")

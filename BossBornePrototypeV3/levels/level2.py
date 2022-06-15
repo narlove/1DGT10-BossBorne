@@ -1,25 +1,29 @@
 from classDefinitions import *
 from levels.levelDescriptions import level2D
+from levels.level3 import run_level3
 import main
+
+def next_level():
+    run_level3()
 
 def run_level2():
     global ventFanBlock
     global vents
     # instanciating all objects in each room so these can be appended to the list of objects in the room
     # CUBICLE 1
-    electricalBoxKey = Items("Small key", True, False, "", "", True) # will only be found in a storage object so doesnt need big description
+    electricalBoxKey = Items("Small key", True, False, "", "", True, True) # will only be found in a storage object so doesnt need big description
     computerCase = Storage("Computer", level2D.computerCaseLongDescription, level2D.computerCaseShortDescription, False, [electricalBoxKey])
-    stickyNote = Items("Sticky note", False, False, level2D.stickyNoteLongDescription, level2D.stickyNoteShortDescription, True)
+    stickyNote = Items("Sticky note", False, False, level2D.stickyNoteLongDescription, level2D.stickyNoteShortDescription, True, False)
     # KITCHEN
-    coffee = Items("Coffee", True, True, level2D.coffeeLongDescription, level2D.coffeeShortDescription, True)
+    coffee = Items("Coffee", True, True, level2D.coffeeLongDescription, level2D.coffeeShortDescription, True, False)
     # CUBICLE 2
-    screwdriver = Items("Screwdriver", True, True, level2D.screwdriverLongDescription, level2D.screwdriverShortDescription, True)
+    screwdriver = Items("Screwdriver", True, True, level2D.screwdriverLongDescription, level2D.screwdriverShortDescription, True, True)
     # maybe we add throwables in here like desk drawers complete with a pencil?
     # CUBICLE 4
-    wires = BreakableItems("Wires", False, False, "", "", False, level2D.wiresBreakMessage, "", "", coffee)
+    wires = BreakableItems("Wires", False, False, "", "", False, False, level2D.wiresBreakMessage, "", "", coffee)
     electricalBox = Storage("Box", level2D.electricalBoxLongDescription, level2D.electricalBoxShortDescription, True, [wires], electricalBoxKey)
     # CUBICLE 5
-    ventScreen = Items("Vent", False, False, level2D.ventScreenLongDescription, level2D.ventScreenShortDescription, True)
+    ventScreen = Items("Vent", False, False, level2D.ventScreenLongDescription, level2D.ventScreenShortDescription, True, True)
     
     # instanciating all the rooms
     #elevator = Room('Elevator', [], None, None, None, None, level2D.elevatorDescription)
@@ -30,7 +34,7 @@ def run_level2():
     cubicle5 = Room("Cubicle 5", [ventScreen], None, None, None, None, level2D.cubicle5Description)
     cubicle6 = Room("Cubicle 6", [], None, None, None, None, level2D.cubicle6Description)
     vents = Room("Vents", [], None, None, None, None, level2D.ventsOnDescription)
-    stairwell = EndingRoom("Stairwell", [], None, None, None, None, level2D.stairwellDescription, None, 2)
+    stairwell = EndingRoom("Stairwell", [], None, None, None, None, level2D.stairwellDescription)
     kitchen = Room("Kitchen", [coffee], None, None, None, None, level2D.kitchenDescription)
 
     # connecting all the rooms
@@ -75,4 +79,4 @@ def run_level2():
 
     currentRoom = cubicle1
     print(level2D.elevatorDescription)
-    main.cmds(currentRoom)
+    main.cmds(currentRoom, next_level)

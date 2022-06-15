@@ -45,12 +45,9 @@ class Room: # this is the room class
     # this needs to be implemented more, but for this example code, it will be left as is
 
 class EndingRoom(Room):
-    def __init__(self, name: str, objects: list, n, e, s, w, description: str, corStartingRoom, currentLevel: int):
+    def __init__(self, name: str, objects: list, n, e, s, w, description: str):
         super().__init__(name, objects, n, e, s, w, description)
-        self._corStartingRoom = corStartingRoom
-        self._currentLevel = currentLevel
-        self._nextLevel = currentLevel + 1
-
+        
 class Items: # all objects stem from here
     def __init__(self, name: str, canPickup: bool, canDrop: bool, description: str, shortDes: str, canLick: bool, _canPunch: bool):
         self._name = name
@@ -68,8 +65,8 @@ class Items: # all objects stem from here
         print(self._description)     
          
 class BreakableItems(Items): # inherits from the items class because they will a lot of similar stuff
-    def __init__(self, name: str, canPickup: bool, canDrop: bool, description: str, shortDes: str, isBroken: bool, breakMessage: str, bDes: str, bSDes: str, reqItem: Items = None):
-        super().__init__(name, canPickup, canDrop, description, shortDes, False)
+    def __init__(self, name: str, canPickup: bool, canDrop: bool, description: str, shortDes: str, canPunch: bool, isBroken: bool, breakMessage: str, bDes: str, bSDes: str, reqItem: Items = None):
+        super().__init__(name, canPickup, canDrop, description, shortDes, False, canPunch)
         self._isBroken = isBroken # check if its broken so it cant be twice in a row
         self._breakMessage = breakMessage # the message to display when its broken
         self._brokenDescription = bDes # the description to set to when its broken
